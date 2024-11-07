@@ -1,2 +1,18 @@
 @import 'tailwindcss/preflight' layer(base);
 @import 'tailwindcss/utilities' layer(utilities);
+
+@theme {
+    /* colors */
+    --color-primary-dark: #323232;
+    --color-primary-light: #FFFFFF;
+    --color-text-light: #000000;
+    --color-text-dark: #EEEEEE;
+    --color-background-light: #EAEAEA;
+    --color-background-dark: #202020;
+    --color-svg-light: #000000;
+    --color-svg-dark: #FFFFFF;
+    
+    /* breakpoints */
+    --breakpoint-tablet: 660px;
+    --breakpoint-desktop: 1280px;
+}
