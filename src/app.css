@@ -1,25 +1,32 @@
-@import "tailwindcss";
+@import url(https://fonts.bunny.net/css?family=ibm-plex-sans:400,500,600|lilita-one:400);
+@import 'tailwindcss';
+
 
 body {
-	@apply bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark;
+	@apply font-sans bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark  mx-auto;
 }
 
 @theme {
+    /* fonts */
+    --font-family-sans: 'IBM Plex Sans', sans-serif;
+    --font-family-display: 'Lilita One', sans-serif;
+    
+    
 	/* colors */
 	--color-*: initial;
-	
-	--color-primary-dark: oklch(26.75% 0 0); 
-	--color-primary-light: oklch(100% 0 0); 
-	--color-text-light: oklch(0% 0 0); 
-	--color-text-dark: oklch(93.95% 0 0); 
-	--color-background-light: oklch(92.94% 0 0); 
-	--color-background-dark: oklch(20.83% 0 0); 
-	--color-svg-light: oklch(0% 0 0); 
+
+	--color-primary-dark: oklch(26.75% 0 0);
+	--color-primary-light: oklch(100% 0 0);
+	--color-text-light: oklch(0% 0 0);
+	--color-text-dark: oklch(93.95% 0 0);
+	--color-background-light: oklch(92.94% 0 0);
+	--color-background-dark: oklch(20.83% 0 0);
+	--color-svg-light: oklch(0% 0 0);
 	--color-svg-dark: oklch(100% 0 0);
 
 	/* breakpoints */
 	--breakpoint-*: initial;
-	
+
 	--breakpoint-tablet: 48rem;
 	--breakpoint-desktop: 64rem;
 
@@ -53,4 +60,9 @@ body {
 	--spacing-128: 8rem;
 	--spacing-144: 9rem;
 	--spacing-160: 10rem;
+}
+
+/* utilities*/
+.debug {
+	@apply border border-[#ff0000];
 }
