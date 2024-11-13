@@ -1,9 +1,15 @@
 <script lang="ts">
-	import SidebarTab from '$lib/components/SidebarTab.svelte';
+	import SideTabs from '$lib/components/SideTabs.svelte';
 	import { navigationPreferences } from '$lib/stores/navigation.svelte';
 
 	let { children } = $props();
 	navigationPreferences.toolName = 'Text Editor';
+
+	const tabs = [
+		{ name: 'Readme', routeId: '/texteditor/readme' },
+		{ name: 'Simple Text Editor', routeId: '/texteditor/simple' },
+		{ name: 'Contribute', routeId: '/texteditor/contribute' }
+	];
 </script>
 
 <svelte:head>
@@ -12,20 +18,18 @@
 </svelte:head>
 
 <section class="relative">
-	<div
+	<section
 		class=" absolute mt-80 flex transition-transform tablet:container tablet:static tablet:mx-auto tablet:transition-none {navigationPreferences.isSidemenuOpen
 			? 'left-4  '
 			: ' right-4  '} "
 	>
-		<div class=" flex w-[60vw] flex-col gap-8 tablet:w-1/4 2xl:w-1/5">
-			<SidebarTab routeId="/texteditor/readme" tabName="Readme" />
-			<SidebarTab routeId="/texteditor/simple" tabName="Simple Text Editor" />
-			<SidebarTab routeId="/texteditor/contribute" tabName="Contribute" />
-		</div>
+		<section class=" flex w-[60vw] flex-col gap-8 tablet:w-1/4 2xl:w-1/5">
+			<SideTabs {tabs} />
+		</section>
 
 		<!-- don't add both classes, will break layout -->
 
-		<div
+		<section
 			class="{navigationPreferences.isSidemenuOpen
 				? 'w-[36vw] overflow-hidden sm:w-[38vw]'
 				: ' '} mb-10 h-fit min-h-screen tablet:mr-40 mr-10 tablet:w-3/4 2xl:w-4/5"
@@ -35,6 +39,6 @@
 			>
 				{@render children?.()}
 			</div>
-		</div>
-	</div>
+		</section>
+	</section>
 </section>
