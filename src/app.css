@@ -7,8 +7,8 @@ body {
 
 @theme {
 	/* fonts */
-	--font-family-sans: 'IBM Plex Sans', sans-serif;
-	--font-family-display: 'Lilita One', sans-serif;
+	--font-sans: 'IBM Plex Sans', sans-serif;
+	--font-display: 'Lilita One', sans-serif;
 
 	/* colors */
 	--color-*: initial;
