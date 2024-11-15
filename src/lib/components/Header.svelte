@@ -4,14 +4,14 @@
 	import { navigationPreferences } from '$lib/stores/navigation.svelte';
 </script>
 
-<section class="bg-primary-dark">
-	<section class="flex justify-between py-4 px-8">
+<section class="dark:bg-primary-dark bg-primary-light">
+	<section class="flex justify-between py-4 px-32">
 		<section class="flex gap-10">
 			<a href="/" class="text-3xl font-display">WEBTOOLS</a>
 			<span class="mt-4 text-xl hidden tablet:block">|</span>
-			<p class="mt-1.5 text-xl font-medium hidden tablet:block">{navigationPreferences.toolName}</p>
+			<p class="mt-6 text-xl font-medium hidden tablet:block">{navigationPreferences.toolName}</p>
 		</section>
-		<section class="mt-1.5 flex gap-4">
+		<section class="mt-6 flex gap-4">
 			<Github />
 		</section>
 	</section>

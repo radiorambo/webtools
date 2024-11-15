@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	let simpleTextEditorContent: string = '';
+	let simpleTextEditorContent: string = $state('');
+
 	if (typeof window !== 'undefined' && window.localStorage) {
 		simpleTextEditorContent = localStorage.getItem('simpleTextEditorData') || '';
 	}
@@ -23,6 +24,7 @@
 	});
 </script>
 
+<!-- svelte-ignore a11y_autofocus -->
 <textarea
 	autofocus
 	bind:value={simpleTextEditorContent}
