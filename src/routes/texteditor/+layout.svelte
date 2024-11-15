@@ -19,7 +19,7 @@
 
 <section class="relative">
 	<section
-		class=" absolute mt-80 flex transition-transform tablet:container tablet:static tablet:mx-auto tablet:transition-none {navigationPreferences.isSidemenuOpen
+		class=" absolute mt-80 flex transition-transform tablet:static tablet:mx-auto tablet:transition-none {navigationPreferences.isSidemenuOpen
 			? 'left-4  '
 			: ' right-4  '} "
 	>

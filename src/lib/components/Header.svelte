@@ -4,7 +4,7 @@
 	import { navigationPreferences } from '$lib/stores/navigation.svelte';
 </script>
 
-<section class="bg-primary-dark container">
+<section class="bg-primary-dark">
 	<section class="flex justify-between py-4 px-8">
 		<section class="flex gap-10">
 			<a href="/" class="text-3xl font-display">WEBTOOLS</a>

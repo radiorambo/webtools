@@ -6,4 +6,6 @@
 </script>
 
 <Header />
-{@render children()}
+<section class="container">
+	{@render children()}
+</section>
