@@ -2,7 +2,7 @@
 @import 'tailwindcss';
 
 body {
-	@apply font-sans bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark  mx-auto;
+	@apply font-sans bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark selection:bg-primary-dark/80 selection:text-white dark:selection:bg-primary-light/70 dark:selection:text-text-light mx-auto;
 }
 
 @theme {
@@ -13,14 +13,18 @@ body {
 	/* colors */
 	--color-*: initial;
 
-	--color-primary-dark: oklch(26.75% 0 0);
-	--color-primary-light: oklch(100% 0 0);
-	--color-text-light: oklch(0% 0 0);
-	--color-text-dark: oklch(93.95% 0 0);
-	--color-background-light: oklch(92.94% 0 0);
-	--color-background-dark: oklch(20.83% 0 0);
-	--color-svg-light: oklch(0% 0 0);
-	--color-svg-dark: oklch(100% 0 0);
+	--color-white: oklch(1 0 0);
+	--color-black: oklch(0 0 0);
+
+	--color-primary-light: oklch(1 0 0);
+	--color-text-light: oklch(0 0 0);
+	--color-background-light: oklch(0.9294 0 0);
+	--color-svg-light: oklch(0 0 0);
+
+	--color-primary-dark: oklch(0.2675 0 0);
+	--color-text-dark: oklch(0.9395 0 0);
+	--color-background-dark: oklch(0.2083 0 0);
+	--color-svg-dark: oklch(1 0 0);
 
 	/* breakpoints */
 	--breakpoint-*: initial;

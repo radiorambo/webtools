@@ -7,9 +7,9 @@
 <section class="dark:bg-primary-dark bg-primary-light">
 	<section class="flex justify-between py-4 px-32">
 		<section class="flex gap-10">
-			<a href="/" class="text-3xl font-display">WEBTOOLS</a>
+			<a href="/" class="text-2xl mt-2 font-display">Webtools</a>
 			<span class="mt-4 text-xl hidden tablet:block">|</span>
-			<p class="mt-6 text-xl font-medium hidden tablet:block">{navigationPreferences.toolName}</p>
+			<p class="mt-5 text-xl font-medium hidden tablet:block">{navigationPreferences.toolName}</p>
 		</section>
 		<section class="mt-6 flex gap-4">
 			<Github />
