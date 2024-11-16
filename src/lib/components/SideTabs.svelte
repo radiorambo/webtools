@@ -10,7 +10,7 @@
 </script>
 
 <section class="relative w-[60vw] tablet:w-1/4 2xl:w-1/5">
-	<section class="flex flex-col gap-8 sticky top-155 tablet:top-125">
+	<section class="flex flex-col gap-8 sticky top-152 tablet:top-122">
 		{#each tabs as tab}
 			<a
 				href={tab.routeId}
