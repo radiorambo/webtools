@@ -1,7 +1,19 @@
 <script lang="ts">
 	import Github from '$lib/icons/Github.svelte';
 	import Menu from '$lib/icons/Menu.svelte';
+	import Theme from '$lib/icons/theme.svelte';
 	import { navigationPreferences } from '$lib/stores/navigation.svelte';
+
+	function updateTheme(): void {
+		console.log('updateTheme', localStorage.theme);
+		if (localStorage.theme === 'dark') {
+			localStorage.theme = 'light';
+			document.documentElement.classList.remove('dark');
+		} else {
+			localStorage.theme = 'dark';
+			document.documentElement.classList.add('dark');
+		}
+	}
 </script>
 
 <section class="dark:bg-primary-dark bg-primary-light">
@@ -13,7 +25,10 @@
 				{navigationPreferences.toolName}
 			</p>
 		</section>
-		<section class="pt-3 flex gap-4">
+		<section class="pt-3 flex gap-12">
+			<button onclick={updateTheme}>
+				<Theme />
+			</button>
 			<Github />
 		</section>
 	</section>
