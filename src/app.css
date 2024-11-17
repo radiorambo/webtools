@@ -1,5 +1,7 @@
 @import url(https://fonts.bunny.net/css?family=ibm-plex-sans:400,500,600|lilita-one:400);
-@import 'tailwindcss';
+@import 'tailwindcss/theme' layer(theme);
+@import 'tailwindcss/preflight' layer(base);
+@import 'tailwindcss/utilities' layer(utilities);
 
 body {
 	@apply font-sans bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark selection:bg-primary-dark/80 selection:text-white dark:selection:bg-primary-light/70 dark:selection:text-text-light mx-auto;
